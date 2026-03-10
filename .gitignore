@@ -1,0 +1,20 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Playwright & Pytest Reports (The "91% HTML" fix)
+report.html
+reports.html
+test-results/
+playwright-report/
+.pytest_cache/
+
+# IDE Settings
+.idea/
+.vscode/
+.assets/
