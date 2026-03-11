@@ -10,6 +10,10 @@ def form_details(request):
     return request.param
 
 @pytest.fixture
+def login_details(request):
+    return request.param
+
+@pytest.fixture
 def browser_instance(playwright:Playwright):
     browser = playwright.chromium.launch(headless=False)
     cntxt = browser.new_context()
