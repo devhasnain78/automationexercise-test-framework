@@ -13,8 +13,8 @@
       "address1": "Street address, P.O. Box, Company name",
       "state": "MP",
       "city" : "Indore",
-      "zip_code": "12345",
-      "mobile": "12345678910"
+      "zipcode": "12345",
+      "mobile_number": "12345678910"
       }
     ]
 
