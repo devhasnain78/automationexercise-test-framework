@@ -2,7 +2,20 @@
   "sign_up_details": [
     {
       "user_name": "hello_dev",
-      "user_email": "hello@dev.com"
+      "user_email": "hello@dev.com",
+      "user_password": "hello@dev"
     }
-  ]
+  ],
+    "form_details":[
+      {
+      "first_name": "Helo",
+      "last_name": "Dev",
+      "address1": "Street address, P.O. Box, Company name",
+      "state": "MP",
+      "city" : "Indore",
+      "zip_code": "12345",
+      "mobile": "12345678910"
+      }
+    ]
+
 }

@@ -3,8 +3,11 @@ from playwright.sync_api import Playwright
 
 
 @pytest.fixture
-def sign_up_details(request):
-    return request.params
+def signup_details(request):
+    return request.param
+@pytest.fixture
+def form_details(request):
+    return request.param
 
 @pytest.fixture
 def browser_instance(playwright:Playwright):
