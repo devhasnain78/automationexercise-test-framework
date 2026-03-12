@@ -25,3 +25,14 @@ User account should be successfully created.
 
 **Expected Result**
 User should be loggin in successfully.
+
+## TC003 - Verify Products and product detail page
+
+**Feature:** Products
+
+**Steps**
+1. Navigate to https://automationexercise.com
+2. Click on 'Products' button
+3. The products list is visible
+4. Click on 'View Product' of first product
+5. Verify that product details is visible: product name, category, price, availability, condition, brand
