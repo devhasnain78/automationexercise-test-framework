@@ -1,0 +1,19 @@
+{
+  "outfits": [
+    {
+      "name": "Blue Top",
+      "category": "Women",
+      "Price": "500"
+    },
+    {
+      "name": "Men Tshirt",
+      "category": "Men",
+      "Price": "400"
+    },
+    {
+      "name": "Sleeveless Dress",
+      "category": "Women",
+      "Price": "1000"
+    }
+  ]
+}

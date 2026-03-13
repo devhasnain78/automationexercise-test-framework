@@ -36,3 +36,14 @@ User should be loggin in successfully.
 3. The products list is visible
 4. Click on 'View Product' of first product
 5. Verify that product details is visible: product name, category, price, availability, condition, brand
+
+## TC004 - Search Product
+
+**Feature:** Search
+
+**Steps**
+1. Navigate to url 'http://automationexercise.com'
+2. Click on 'Products' button
+3. Enter product name in search input and click search button
+4. Verify 'SEARCHED PRODUCTS' is visible
+5. Verify all the products related to search are visible

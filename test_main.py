@@ -5,6 +5,7 @@ from playwright.sync_api import Playwright, Page, expect
 
 from page_objects.login_page import LoginPage
 from page_objects.products_page import ProductsPage
+from page_objects.search_product import SearchProduct
 from page_objects.signup_page import SignUpPage
 
 with open("data/signup_creds.json") as data:
@@ -15,6 +16,11 @@ with open("data/signup_creds.json") as data:
 with open("data/login_creds.json") as creds:
     details = json.load(creds)
     login_data = details["user_details"]
+
+# def load_products():
+with open("data/product_names.json") as prods:
+    load = json.load(prods)
+    names = load["outfits"]
 
 ## TC001 – Register User
 @pytest.mark.parametrize("signup_details,form_details",list(zip(signup_data, form_data)), indirect=True)
@@ -42,6 +48,15 @@ def test_products(browser_instance):
     expect(prod_list).to_be_visible()
     info = produs.view_product()
     expect(info).to_be_visible()
+
+## TC004 - Search Product
+@pytest.mark.parametrize('products', names)
+def test_search(browser_instance, products):
+    search = SearchProduct(browser_instance)
+    search.navigation()
+    search.search_product(products)
+    expect(search.after_search(products)).to_be_visible()
+
 
 
 
