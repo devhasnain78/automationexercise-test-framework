@@ -7,6 +7,7 @@ from page_objects.login_page import LoginPage
 from page_objects.products_page import ProductsPage
 from page_objects.search_product import SearchProduct
 from page_objects.signup_page import SignUpPage
+from page_objects.subscription_page import SubscriptionPage
 
 with open("data/signup_creds.json") as data:
      new = json.load(data)
@@ -56,6 +57,14 @@ def test_search(browser_instance, products):
     search.navigation()
     search.search_product(products)
     expect(search.after_search(products)).to_be_visible()
+
+## TC005 - Verify Subscription
+@pytest.mark.parametrize("login_details", login_data)
+def test_subscription(browser_instance, login_details):
+    email = login_details["user_mail"]
+    verify = SubscriptionPage(browser_instance)
+    verify.navigation()
+    verify.verify_subscription(email)
 
 
 

@@ -47,3 +47,14 @@ User should be loggin in successfully.
 3. Enter product name in search input and click search button
 4. Verify 'SEARCHED PRODUCTS' is visible
 5. Verify all the products related to search are visible
+
+## TC005 - Verify Subscription
+
+**Feature:** Subscription
+
+**Steps**
+1. Navigate to url 'http://automationexercise.com'
+2. Scroll down to footer
+3. Verify text 'SUBSCRIPTION'
+4. Enter email address in input and click arrow button
+5. Verify success message 'You have been successfully subscribed!' is visible
