@@ -10,4 +10,7 @@ class SubscriptionPage:
         footer.locator("#susbscribe_email").fill(email)
         footer.locator("#subscribe").click()
 
+    def sucess_alert(self):
+        return self.page.locator(".alert-success")
+
 

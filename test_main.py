@@ -65,6 +65,10 @@ def test_subscription(browser_instance, login_details):
     verify = SubscriptionPage(browser_instance)
     verify.navigation()
     verify.verify_subscription(email)
+    alert = verify.sucess_alert()
+    expect(alert).to_be_visible()
+    expect(alert).to_contain_text("You have been successfully subscribed!")
+
 
 
 
