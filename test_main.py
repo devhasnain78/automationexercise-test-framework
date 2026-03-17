@@ -3,6 +3,7 @@ import json
 import pytest
 from playwright.sync_api import Playwright, Page, expect
 
+from page_objects.add_product_page import AddProductPage
 from page_objects.login_page import LoginPage
 from page_objects.products_page import ProductsPage
 from page_objects.search_product import SearchProduct
@@ -69,6 +70,10 @@ def test_subscription(browser_instance, login_details):
     expect(alert).to_be_visible()
     expect(alert).to_contain_text("You have been successfully subscribed!")
 
+def test_product_to_cart(page:Page,browser_instance):
+    cart = AddProductPage(browser_instance)
+    cart.navigation()
+    cart.add_product()
 
 
 

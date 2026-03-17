@@ -58,3 +58,17 @@ User should be loggin in successfully.
 3. Verify text 'SUBSCRIPTION'
 4. Enter email address in input and click arrow button
 5. Verify success message 'You have been successfully subscribed!' is visible
+
+## TC06 - Add Products in Cart
+
+**Feature:** Add product
+
+**Steps**
+1. Navigate to url 'http://automationexercise.com'
+2. Click 'Products' button
+3. Hover over first product and click 'Add to cart'
+4. Click 'Continue Shopping' button
+5. Hover over second product and click 'Add to cart'
+6. Click 'View Cart' button
+7. Verify both products are added to Cart
+8. Verify their prices, quantity and total price
