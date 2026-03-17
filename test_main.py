@@ -76,5 +76,3 @@ def test_product_to_cart(page:Page,browser_instance):
     cart.add_product()
 
 
-
-

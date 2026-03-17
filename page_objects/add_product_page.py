@@ -9,8 +9,13 @@ class AddProductPage:
         nav = self.page.locator(".container")
         nav.get_by_role(role="link", name="Products").click()
         items = self.page.locator(".single-products")
-        item_1 = items.nth(0)
-        item_1.hover()
-        item_1.locator(".product-overlay .add-to-cart").click()
 
-
+        for i in range(2):
+            item = items.nth(i)
+            item.scroll_into_view_if_needed()
+            item.hover()
+            btn = item.locator(".product-overlay .add-to-cart")
+            btn.wait_for(state="visible")
+            btn.click()
+            modal = self.page.locator(".modal-content")
+            modal.get_by_role(role="button", name="Continue Shopping").click()
