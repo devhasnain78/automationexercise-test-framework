@@ -1,4 +1,5 @@
 import json
+from collections import Counter
 
 import pytest
 from playwright.sync_api import Playwright, Page, expect
@@ -73,6 +74,8 @@ def test_subscription(browser_instance, login_details):
 def test_product_to_cart(page:Page,browser_instance):
     cart = AddProductPage(browser_instance)
     cart.navigation()
-    cart.add_product()
+    selected_prods = cart.add_product()
+    cart_prods = cart.view_cart()
+    assert Counter(selected_prods) == Counter(cart_prods)
 
 
